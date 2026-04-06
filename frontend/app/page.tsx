@@ -41,7 +41,7 @@ export default async function Home() {
             <div className="mt-6 flex justify-center gap-4">
 
   <Link
-    href="./stories"
+    href="/stories"
     className="
       bg-[#D4A574] text-black px-6 py-3 rounded-full
       transition-all duration-300
