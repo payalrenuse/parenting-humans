@@ -1,7 +1,7 @@
 import { getStoryBySlug } from "@/lib/api";
 
 export default async function StoryDetail({ params }: any) {
-  const { slug } = await params; // ✅ FIXED
+  const { slug } = await params;
 
   const story = await getStoryBySlug(slug);
 
@@ -18,7 +18,7 @@ export default async function StoryDetail({ params }: any) {
   return (
     <section className="bg-black text-white">
 
-      {/* 🔥 BANNER */}
+      {/* BANNER */}
       <div className="relative w-full h-[300px]">
         <img src={image} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
@@ -27,7 +27,7 @@ export default async function StoryDetail({ params }: any) {
         </h1>
       </div>
 
-      {/* 🔥 CONTENT */}
+      {/*  CONTENT */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
 
         {/* LEFT */}
