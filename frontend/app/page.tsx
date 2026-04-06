@@ -4,6 +4,7 @@ import StatsSection from "./components/StatsSection";
 import EventsSection from "./components/EventsSection";
 import ContactSection from "./components/ContactSection";
 import QuoteBanner from "./components/QuoteBanner";
+import Link from "next/link";
 export default async function Home() {
   const data = await getStories();
   const stories = data.data;
@@ -31,13 +32,33 @@ export default async function Home() {
           </p>
 
           <div className="mt-6 flex justify-center gap-4">
-           <button className="...">
-  Read Stories →
-</button>
 
-<button className="...">
-  Explore Events
-</button>
+  <Link
+    href="/stories"
+    className="
+      bg-[#D4A574] text-black px-6 py-3 rounded-full
+      transition-all duration-300
+      hover:bg-[#c09563]
+      hover:scale-105
+      hover:shadow-lg hover:shadow-[#D4A574]/30
+    "
+  >
+    Read Stories →
+  </Link>
+
+  <Link
+    href="/events"
+    className="
+      border border-white text-white px-6 py-3 rounded-full
+      transition-all duration-300
+      hover:bg-white hover:text-black
+      hover:scale-105
+    "
+  >
+    Explore Events
+  </Link>
+
+</div>
             <div className="mt-6 flex justify-center gap-4">
 
   <Link
